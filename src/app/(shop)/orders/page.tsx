@@ -1,8 +1,8 @@
 
-export default function OrdersPage() {
+export default function NamePage() {
   return (
     <div>
-      <h1>Listado de ordenes Page</h1>
+      <h1>Hello Page</h1>
     </div>
   );
 }
