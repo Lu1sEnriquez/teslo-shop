@@ -1,15 +1,19 @@
 import { titleFont } from '@/config/fonts';
 import Link from 'next/link';
 
-export default function LoginPage() {
+export default function NewAcountPage() {
   return (
     <main className="flex flex-col min-h-screen pt-32 sm:pt-52">
 
-      <h1 className={ `${ titleFont.className } text-4xl mb-5` }>Ingresar</h1>
+      <h1 className={ `${ titleFont.className } text-4xl mb-5` }>Nueva Cuenta</h1>
 
       <div className="flex flex-col">
 
-        <label htmlFor="email">Correo electrónico</label>
+        <label htmlFor="email">Nombre Completo</label>
+        <input
+          className="px-5 py-2 border bg-gray-200 rounded mb-5"
+          type="text" />
+        <label htmlFor="email">Correo Electrónico</label>
         <input
           className="px-5 py-2 border bg-gray-200 rounded mb-5"
           type="email" />
@@ -23,7 +27,7 @@ export default function LoginPage() {
         <button
           
           className="btn-primary">
-          Ingresar
+          Crear Cuenta
         </button>
 
 
@@ -35,9 +39,9 @@ export default function LoginPage() {
         </div>
 
         <Link
-          href="/auth/new-account" 
+          href="/auth/login" 
           className="btn-secondary text-center">
-          Crear una nueva cuenta
+          ingresar
         </Link>
 
       </div>
