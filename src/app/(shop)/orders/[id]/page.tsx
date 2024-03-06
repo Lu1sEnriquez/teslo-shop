@@ -17,7 +17,7 @@ interface Props {
   };
 }
 
-export default function OrdenPage({ params }: Props) {
+export default function OrderPage({ params }: Props) {
   const { id } = params;
 
   //  Todo: Verificar
@@ -34,7 +34,7 @@ export default function OrdenPage({ params }: Props) {
           {/* Carrito */}
 
           <div className=" flex flex-col mt-5">
-            
+            <Link href={"/orders"} passHref>
             {/* mensaje  estado orden */}
             <div className={
               clsx("flex items-center rounded-lg py-2 px-3.5 text-xs font-bold text-white mb-5",
@@ -48,7 +48,7 @@ export default function OrdenPage({ params }: Props) {
               {/* <span className="mx-2">Pendiente de Pago</span> */}
               <span className="mx-2">Orden Pagada</span>
             </div>
-
+            </Link>
             {/* Items */}
             {productInCart.map((product) => (
               <div key={product.slug} className="flex flex-row">
@@ -104,7 +104,7 @@ export default function OrdenPage({ params }: Props) {
             <div className={
               clsx("flex items-center rounded-lg py-2 px-3.5 text-xs font-bold text-white mb-5",
               {
-                'bg-red-500': true,
+                'bg-red-500': false,
                 'bg-green-700': true,
               }
               )
