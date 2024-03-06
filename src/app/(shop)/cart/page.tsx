@@ -51,7 +51,7 @@ export default function CartPage() {
 
           {/* Checkout -Resumen de la compra */}
 
-          <div className="  bg-white rounded-xl shadow-xl p-7">
+          <div className="  bg-white rounded-xl shadow-xl p-7 h-fit">
             <h2 className="mb-2 text-2xl">Resumen de orden</h2>
 
             <div className="grid grid-cols-2">
